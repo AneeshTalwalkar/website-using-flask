@@ -89,6 +89,10 @@ def logout():
 def data():
     return render_template("table.html")
 
+@app.route("/hi/")
+def source():
+    return redirect("https://github.com/AneeshTalwalkar/website-using-flask")
+
 if __name__ == '__main__':
     with app.app_context():
         db.create_all()

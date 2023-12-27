@@ -1,0 +1,17 @@
+<!--index.html code-->
+{%extends "base.html"%}
+{%block title%}Home{%endblock%}
+{% block h1 %} Aneesh's website{% endblock %}
+{% block content %}
+
+<p>This is a normal website<br>Numbers : 1234567890<br>symbols: !@#$%^&*()_+={}:";'\,./</p>
+<p>hi {{ content }}, {{ content2 }}</p>
+<p>I can also run a Python code that prints even numbers:</p>
+{% for i in range(11) %}
+    {% if i % 2 == 0 %}
+            <p>{{i}}</p>
+    {% endif %}
+{% endfor %}     
+<center><a href="http://127.0.0.1:5000/table">Click here to see table</a></center>
+{% endblock %}
+

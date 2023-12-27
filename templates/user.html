@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block title %}home | user{% endblock %}
+{% block h1 %}Logged in as: {{username}}{% endblock %}
+{% block content %}
+{% with messages = get_flashed_messages() %}
+{% if messages %}
+  {% for i in messages %}
+    <p>{{i}}</p>
+  {% endfor %}
+{% endif %}  
+{% endwith %}
+
+<form action ="#", method="post">
+  <p><input type ="email" name="email" placeholder="Enter Email" value="{{email if email}}"/></p>
+  <p><input type ="submit" value="submit"/></p>   
+</form>
+
+{% endblock %}
